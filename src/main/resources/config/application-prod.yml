@@ -34,7 +34,7 @@ spring:
         database: MYSQL
         show-sql: false
         hibernate:
-        	ddl-auto: update
+            ddl-auto: update
         properties:
             hibernate.cache.use_second_level_cache: true
             hibernate.cache.use_query_cache: false
