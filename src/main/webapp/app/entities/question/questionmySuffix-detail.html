@@ -1,0 +1,47 @@
+
+<div>
+    <h2><span data-translate="choiceApp.question.detail.title">Question</span> {{vm.question.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="choiceApp.question.content">Content</span></dt>
+        <dd>
+            <span>{{vm.question.content}}</span>
+        </dd>
+        <dt><span data-translate="choiceApp.question.remark">Remark</span></dt>
+        <dd>
+            <span>{{vm.question.remark}}</span>
+        </dd>
+        <dt><span data-translate="choiceApp.question.createdDate">Created Date</span></dt>
+        <dd>
+            <span>{{vm.question.createdDate | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span data-translate="choiceApp.question.lastModifiedDate">Last Modified Date</span></dt>
+        <dd>
+            <span>{{vm.question.lastModifiedDate | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span data-translate="choiceApp.question.createdBy">Created By</span></dt>
+        <dd>
+            <span>{{vm.question.createdBy}}</span>
+        </dd>
+        <dt><span data-translate="choiceApp.question.lastModifiedBy">Last Modified By</span></dt>
+        <dd>
+            <span>{{vm.question.lastModifiedBy}}</span>
+        </dd>
+        <dt><span data-translate="choiceApp.question.investigation">Investigation</span></dt>
+        <dd>
+            <a ui-sref="investigationmySuffix-detail({id:vm.question.investigationId})">{{vm.question.investigationId}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="questionmySuffix-detail.edit({id:vm.question.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

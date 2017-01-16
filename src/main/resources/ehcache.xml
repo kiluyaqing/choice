@@ -20,5 +20,43 @@
 
     <cache alias="org.kiluyaqing.choice.domain.User.persistentTokens" uses-template="simple"/>
 
+    <cache alias="org.kiluyaqing.choice.domain.Region" uses-template="simple"/>
+
+    <cache alias="org.kiluyaqing.choice.domain.Country" uses-template="simple"/>
+
+    <cache alias="org.kiluyaqing.choice.domain.Location" uses-template="simple"/>
+
+    <cache alias="org.kiluyaqing.choice.domain.Department" uses-template="simple"/>
+
+    <cache alias="org.kiluyaqing.choice.domain.Department.employees" uses-template="simple"/>
+
+    <cache alias="org.kiluyaqing.choice.domain.Task" uses-template="simple"/>
+
+    <cache alias="org.kiluyaqing.choice.domain.Task.jobs" uses-template="simple"/>
+
+    <cache alias="org.kiluyaqing.choice.domain.Employee" uses-template="simple"/>
+
+    <cache alias="org.kiluyaqing.choice.domain.Employee.jobs" uses-template="simple"/>
+
+    <cache alias="org.kiluyaqing.choice.domain.Job" uses-template="simple"/>
+
+    <cache alias="org.kiluyaqing.choice.domain.Job.tasks" uses-template="simple"/>
+
+    <cache alias="org.kiluyaqing.choice.domain.JobHistory" uses-template="simple"/>
+
+    <cache alias="org.kiluyaqing.choice.domain.ChoiceUser" uses-template="simple"/>
+
+    <cache alias="org.kiluyaqing.choice.domain.ChoiceUser.investigations" uses-template="simple"/>
+
+    <cache alias="org.kiluyaqing.choice.domain.Investigation" uses-template="simple"/>
+
+    <cache alias="org.kiluyaqing.choice.domain.Investigation.questions" uses-template="simple"/>
+
+    <cache alias="org.kiluyaqing.choice.domain.Question" uses-template="simple"/>
+
+    <cache alias="org.kiluyaqing.choice.domain.Question.answers" uses-template="simple"/>
+
+    <cache alias="org.kiluyaqing.choice.domain.Answer" uses-template="simple"/>
+
     <!-- jhipster-needle-ehcache-add-entry -->
 </config>

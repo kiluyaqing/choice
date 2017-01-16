@@ -7,6 +7,18 @@
             "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
             "entities": {
                 "main": "数据",
+                "regionmySuffix": "Region",
+                "countrymySuffix": "Country",
+                "locationmySuffix": "Location",
+                "departmentmySuffix": "Department",
+                "taskmySuffix": "Task",
+                "employeemySuffix": "Employee",
+                "jobmySuffix": "Job",
+                "jobHistorymySuffix": "Job History",
+                "choiceUsermySuffix": "Choice User",
+                "investigationmySuffix": "Investigation",
+                "questionmySuffix": "Question",
+                "answermySuffix": "Answer",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {

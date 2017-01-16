@@ -1,0 +1,47 @@
+
+<div>
+    <h2><span data-translate="choiceApp.investigation.detail.title">Investigation</span> {{vm.investigation.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="choiceApp.investigation.content">Content</span></dt>
+        <dd>
+            <span>{{vm.investigation.content}}</span>
+        </dd>
+        <dt><span data-translate="choiceApp.investigation.remark">Remark</span></dt>
+        <dd>
+            <span>{{vm.investigation.remark}}</span>
+        </dd>
+        <dt><span data-translate="choiceApp.investigation.createdDate">Created Date</span></dt>
+        <dd>
+            <span>{{vm.investigation.createdDate | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span data-translate="choiceApp.investigation.lastModifiedDate">Last Modified Date</span></dt>
+        <dd>
+            <span>{{vm.investigation.lastModifiedDate | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span data-translate="choiceApp.investigation.createdBy">Created By</span></dt>
+        <dd>
+            <span>{{vm.investigation.createdBy}}</span>
+        </dd>
+        <dt><span data-translate="choiceApp.investigation.lastModifiedBy">Last Modified By</span></dt>
+        <dd>
+            <span>{{vm.investigation.lastModifiedBy}}</span>
+        </dd>
+        <dt><span data-translate="choiceApp.investigation.choiceUser">Choice User</span></dt>
+        <dd>
+            <a ui-sref="choice-usermySuffix-detail({id:vm.investigation.choiceUserId})">{{vm.investigation.choiceUserId}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="investigationmySuffix-detail.edit({id:vm.investigation.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

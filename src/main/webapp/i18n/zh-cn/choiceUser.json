@@ -1,0 +1,29 @@
+{
+    "choiceApp": {
+        "choiceUser" : {
+            "home": {
+                "title": "Choice Users",
+                "createLabel": "Create a new Choice User",
+                "createOrEditLabel": "Create or edit a Choice User",
+                "search": "Search for Choice User"
+            },
+            "created": "A new Choice User is created with identifier {{ param }}",
+            "updated": "A Choice User is updated with identifier {{ param }}",
+            "deleted": "A Choice User is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Choice User {{ id }}?"
+            },
+            "detail": {
+                "title": "Choice User"
+            },
+            "userName": "User Name",
+            "passwordHash": "Password Hash",
+            "email": "Email",
+            "createdDate": "Created Date",
+            "lastModifiedDate": "Last Modified Date",
+            "createdBy": "Created By",
+            "lastModifiedBy": "Last Modified By",
+            "investigation": "Investigation"
+        }
+    }
+}

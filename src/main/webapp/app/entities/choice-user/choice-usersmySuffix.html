@@ -1,0 +1,72 @@
+<div>
+    <h2 data-translate="choiceApp.choiceUser.home.title">Choice Users</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="choice-usermySuffix.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span  data-translate="choiceApp.choiceUser.home.createLabel">
+                        Create new Choice User
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.transition()">
+                    <th jh-sort-by="id"><span data-translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="userName"><span data-translate="choiceApp.choiceUser.userName">User Name</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="passwordHash"><span data-translate="choiceApp.choiceUser.passwordHash">Password Hash</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="email"><span data-translate="choiceApp.choiceUser.email">Email</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="createdDate"><span data-translate="choiceApp.choiceUser.createdDate">Created Date</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="lastModifiedDate"><span data-translate="choiceApp.choiceUser.lastModifiedDate">Last Modified Date</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="createdBy"><span data-translate="choiceApp.choiceUser.createdBy">Created By</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="lastModifiedBy"><span data-translate="choiceApp.choiceUser.lastModifiedBy">Last Modified By</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="choiceUser in vm.choiceUsers track by choiceUser.id">
+                    <td><a ui-sref="choice-usermySuffix-detail({id:choiceUser.id})">{{choiceUser.id}}</a></td>
+                    <td>{{choiceUser.userName}}</td>
+                    <td>{{choiceUser.passwordHash}}</td>
+                    <td>{{choiceUser.email}}</td>
+                        <td>{{choiceUser.createdDate | date:'mediumDate'}}</td>
+                        <td>{{choiceUser.lastModifiedDate | date:'mediumDate'}}</td>
+                    <td>{{choiceUser.createdBy}}</td>
+                    <td>{{choiceUser.lastModifiedBy}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="choice-usermySuffix-detail({id:choiceUser.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="choice-usermySuffix.edit({id:choiceUser.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="choice-usermySuffix.delete({id:choiceUser.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="text-center">
+        <jhi-item-count page="vm.page" total="vm.queryCount" items-per-page="vm.itemsPerPage"></jhi-item-count>
+        <uib-pagination class="pagination-sm" total-items="vm.totalItems" items-per-page="vm.itemsPerPage" ng-model="vm.page" ng-change="vm.transition()"></uib-pagination>
+    </div>
+</div>

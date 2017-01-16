@@ -1,0 +1,51 @@
+entity ChoiceUser {
+	userName String maxlength(100),
+	passwordHash String maxlength(60),
+	email String maxlength(100),
+	createdDate LocalDate,
+	lastModifiedDate LocalDate,
+	createdBy String maxlength(50),
+	lastModifiedBy String maxlength(50)
+}
+
+entity Investigation {
+	content String maxlength(1024),
+	remark String maxlength(1024),
+	createdDate LocalDate,
+	lastModifiedDate LocalDate,
+	createdBy String maxlength(50),
+	lastModifiedBy String maxlength(50)
+}
+
+entity Question {
+	content String maxlength(1024),
+	remark String maxlength(1024),
+	createdDate LocalDate,
+	lastModifiedDate LocalDate,
+	createdBy String maxlength(50),
+	lastModifiedBy String maxlength(50)
+}
+
+entity Answer {
+	content String maxlength(1024),
+	result Boolean,
+	remark String maxlength(1024),
+	createdDate LocalDate,
+	lastModifiedDate LocalDate,
+	createdBy String maxlength(50),
+	lastModifiedBy String maxlength(50)
+}
+
+relationship OneToMany {
+	Question{answer} to Answer,
+	Investigation{question} to Question,
+	ChoiceUser{investigation} to Investigation
+}
+
+paginate ChoiceUser, Investigation, Question, Answer with pagination
+
+dto * with mapstruct
+
+service all with serviceImpl
+
+angularSuffix * with mySuffix

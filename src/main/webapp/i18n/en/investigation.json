@@ -1,0 +1,29 @@
+{
+    "choiceApp": {
+        "investigation" : {
+            "home": {
+                "title": "Investigations",
+                "createLabel": "Create a new Investigation",
+                "createOrEditLabel": "Create or edit a Investigation",
+                "search": "Search for Investigation"
+            },
+            "created": "A new Investigation is created with identifier {{ param }}",
+            "updated": "A Investigation is updated with identifier {{ param }}",
+            "deleted": "A Investigation is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Investigation {{ id }}?"
+            },
+            "detail": {
+                "title": "Investigation"
+            },
+            "content": "Content",
+            "remark": "Remark",
+            "createdDate": "Created Date",
+            "lastModifiedDate": "Last Modified Date",
+            "createdBy": "Created By",
+            "lastModifiedBy": "Last Modified By",
+            "choiceUser": "Choice User",
+            "question": "Question"
+        }
+    }
+}
